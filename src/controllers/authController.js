@@ -6,7 +6,7 @@ import env from '../config/env.js';
 const cookieOptions = {
   httpOnly: true,
   secure: env.nodeEnv === 'production',
-  sameSite: env.nodeEnv === 'production' ? 'strict' : 'lax',
+  sameSite: env.nodeEnv === 'production' ? 'none' : 'lax',
 };
 
 export const login = asyncHandler(async (req, res) => {
