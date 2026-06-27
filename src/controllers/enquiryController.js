@@ -1,6 +1,7 @@
 import asyncHandler from '../utils/asyncHandler.js';
 import ApiResponse from '../utils/ApiResponse.js';
 import * as enquiryService from '../services/enquiryService.js';
+import { validationResult } from 'express-validator';
 
 export const getAll = asyncHandler(async (req, res) => {
   const result = await enquiryService.getEnquiries(req.query);
